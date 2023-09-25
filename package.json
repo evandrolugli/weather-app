@@ -1,15 +1,5 @@
 {
-  "name": "weather-app",
-  "version": "1.0.0",
-  "description": "Weather app to prove our collaborative skills.",
-  "main": "index.js",
-  "scripts": {
-    "build-css": "tailwindcss build src/style.css -o public/style.css"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "tailwindcss": "^3.3.3"
   }
 }

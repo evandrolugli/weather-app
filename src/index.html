@@ -5,16 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Weather App</title>
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../dist/output.css" />
     </head>
     <body>
         <div>
             <!-- Content wrapper -->
             <div>
-                <nav>
-                    <h1><a href="#">Weather App</a></h1>
+                <nav class="flex items-center justify-between px-6 h-12 bg-sky-950 text-white">
+                    <h1>
+                        <a class="text-2xl font-bold text-sky-400" href="#"
+                            >Weather App</a
+                        >
+                    </h1>
                     <div>
-                        <ul>
+                        <ul class="flex gap-5">
                             <li>
                                 <a href="#"><span>Home</span></a>
                             </li>
@@ -37,16 +41,20 @@
                 </div>
 
                 <header>
-                    <h2>h2 Title in Header</h2>
-                    <h3>h3 Title in Header</h3>
+                    <h2 class="text-3xl font-medium text-indigo-900">
+                        h2 Title in Header
+                    </h2>
+                    <h3 class="text-2xl text-slate-500">h3 Title in Header</h3>
                 </header>
 
                 <div>
                     <!-- Cards section -->
-                    <h4>h4 Title - Card section</h4>
+                    <h4 class="text-xl text-cyan-700">
+                        h4 Title - Card section
+                    </h4>
                     <!-- Cards go here! -->
                     <div>
-                        <img src="assets/icons/sun.png" alt="" />
+                        <img src="../assets/icons/sun.png" alt="" />
                         <div>
                             <span>Clear Sky</span>
                             <span>19.6 C</span>
@@ -58,8 +66,6 @@
                     <div>
                         <!-- Cards go here! -->
                     </div>
-
-                    
                 </div>
             </main>
         </div>

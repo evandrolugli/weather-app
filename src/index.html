@@ -8,25 +8,35 @@
         <link rel="stylesheet" href="../dist/output.css" />
     </head>
     <body>
-        <div>
+        <div class="grid grid-cols-12">
             <!-- Content wrapper -->
-            <div>
-                <nav class="flex items-center justify-between px-6 h-12 bg-sky-950 text-white w-screen fixed top-0">
+            <div class="col-span-full h-14">
+                <nav
+                    class="flex items-center justify-between h-full px-4 bg-sky-950 text-white"
+                >
                     <h1>
-                        <a class="text-base sm:text-xl md:text-2xl font-bold text-sky-400" href="#"
+                        <a
+                            class="text-base sm:text-xl md:text-2xl font-bold text-sky-400"
+                            href="#"
                             >Weather App</a
                         >
                     </h1>
                     <div>
                         <ul class="flex gap-5 font-bold">
                             <li>
-                                <a class="hover:text-sky-300" href="#"><span>Home</span></a>
+                                <a class="hover:text-sky-300" href="#"
+                                    ><span>Home</span></a
+                                >
                             </li>
                             <li>
-                                <a class="hover:text-sky-300" href="#"><span>About</span></a>
+                                <a class="hover:text-sky-300" href="#"
+                                    ><span>About</span></a
+                                >
                             </li>
                             <li>
-                                <a class="hover:text-sky-300" href="#"><span>Contact</span></a>
+                                <a class="hover:text-sky-300" href="#"
+                                    ><span>Contact</span></a
+                                >
                             </li>
                         </ul>
                     </div>
@@ -34,33 +44,24 @@
             </div>
             <!-- End navigation bar -->
 
-            <main>
-                <header>
-                    <h2 class="text-3xl font-medium text-indigo-900">
-                        h2 Title in Header
+            <main
+                class="col-span-12 md:col-span-10 lg:col-span-8 md:col-start-2 lg:col-start-3 grid grid-rows-6 px-4 mt-12"
+            >
+                <header class="row-span-1">
+                    <h2 class="text-xl md:text-2xl lg:text-3xl font-medium text-indigo-900">
+                        ICON - TEMPERATURE - CITY
                     </h2>
-                    <h3 class="text-2xl text-slate-500">h3 Title in Header</h3>
+                    <h3 class="text-lg md:text-2xl lg:text-3xl text-slate-500">SKY CONDITIONS</h3>
                 </header>
 
-                <div>
-                    <!-- Cards section -->
-                    <h4 class="text-xl text-cyan-700">
-                        h4 Title - Card section
-                    </h4>
-                    <!-- Cards go here! -->
-                    <div>
-                        <img src="../assets/icons/sun.png" alt="" />
-                        <div>
-                            <span>Clear Sky</span>
-                            <span>19.6 C</span>
-                        </div>
-                    </div>
+                <!-- CURRENT WEATHER INFO --- NICOLAS -->
+                <div class="row-span-3 bg-sky-400">
+                    CURRENT WEATHER INFO
+                </div>
 
-                    <h4>Next h4 Title - Card section</h4>
-
-                    <div>
-                        <!-- Cards go here! -->
-                    </div>
+                <!-- DAILY WEATHER INFO --- EVANDRO -->
+                <div class="row-span-2 bg-yellow-300">
+                    DAILY WEATHER INFO
                 </div>
             </main>
         </div>

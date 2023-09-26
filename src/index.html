@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../dist/output.css" />
     </head>
     <body>
-        <div class="grid grid-cols-12">
+        <div class="grid grid-cols-12 w-full h-full">
             <!-- Content wrapper -->
             <div class="col-span-full h-14">
                 <nav
@@ -45,23 +45,39 @@
             <!-- End navigation bar -->
 
             <main
-                class="col-span-12 md:col-span-10 lg:col-span-8 md:col-start-2 lg:col-start-3 grid grid-rows-6 px-4 mt-12"
+                class="col-span-12 max-w-3xl mx-auto my-6"
             >
-                <header class="row-span-1">
-                    <h2 class="text-xl md:text-2xl lg:text-3xl font-medium text-indigo-900">
-                        ICON - TEMPERATURE - CITY
-                    </h2>
-                    <h3 class="text-lg md:text-2xl lg:text-3xl text-slate-500">SKY CONDITIONS</h3>
-                </header>
+                <div class="flex flex-wrap justify-center items-center mx-4">
+                    <!-- Content wrapper to left a void margin -->
+                    <header class="block w-full">
+                        <h2
+                            class="text-xl md:text-2xl lg:text-3xl font-medium text-indigo-900"
+                        >
+                            ICON - TEMPERATURE - CITY
+                        </h2>
+                        <h3
+                            class="text-lg md:text-2xl lg:text-3xl text-slate-500"
+                        >
+                            SKY CONDITIONS
+                        </h3>
+                    </header>
 
-                <!-- CURRENT WEATHER INFO --- NICOLAS -->
-                <div class="row-span-3 bg-sky-400">
-                    CURRENT WEATHER INFO
-                </div>
+                    <!-- CURRENT WEATHER INFO --- NICOLAS -->
+                    <div class="block w-full bg-sky-400">
+                        CURRENT WEATHER INFO
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Eius quos odio obcaecati iusto ducimus ex
+                            assumenda rerum nobis eaque. Corrupti, dolorem
+                            sapiente? Porro aperiam quae id molestiae
+                            consequuntur officia dolores.
+                        </p>
+                    </div>
 
-                <!-- DAILY WEATHER INFO --- EVANDRO -->
-                <div class="row-span-2 bg-yellow-300">
-                    DAILY WEATHER INFO
+                    <!-- DAILY WEATHER INFO --- EVANDRO -->
+                    <div class="block w-full bg-yellow-300">
+                        DAILY WEATHER INFO
+                    </div>
                 </div>
             </main>
         </div>

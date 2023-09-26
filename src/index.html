@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Weather App</title>
 
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+
         <link rel="stylesheet" href="../dist/output.css" />
     </head>
     <body>
@@ -75,8 +77,45 @@
                     </div>
 
                     <!-- DAILY WEATHER INFO --- EVANDRO -->
-                    <div class="block w-full bg-yellow-300">
-                        DAILY WEATHER INFO
+                    <div class="block w-full">
+                        
+                        <div class="container mx-auto mt-8">
+                            <h1 class="text-2xl font-bold mb-4">Daily Forecast</h1>
+                            <div class="flex overflow-x-auto space-x-4">
+                                <!-- Card -->
+                                <div class="rounded-lg p-4 shadow-lg flex-shrink-0" style="min-width: 100px;">
+                                    <p class="text-center text-lg font-semibold">Mon</p>
+                                    <img src="../assets/icons/sun.png" alt="Sun" class="mx-auto mt-2 w-8 h-8">
+                                    <p class="text-center text-gray-600">Max: 30°C</p>
+                                    <p class="text-center text-gray-600">Min: 15°C</p>
+                                </div>
+                                <div class="rounded-lg p-4 shadow-lg flex-shrink-0" style="min-width: 100px;">
+                                    <p class="text-center text-lg font-semibold">Tue</p>
+                                    <img src="../assets/icons/rain.png" alt="Rain" class="mx-auto mt-2 w-8 h-8">
+                                    <p class="text-center text-gray-600">Max: 20°C</p>
+                                    <p class="text-center text-gray-600">Min: 10°C</p>
+                                </div>
+                                <div class="rounded-lg p-4 shadow-lg flex-shrink-0" style="min-width: 100px;">
+                                    <p class="text-center text-lg font-semibold">Wed</p>
+                                    <img src="../assets/icons/sun.png" alt="Sun" class="mx-auto mt-2 w-8 h-8">
+                                    <p class="text-center text-gray-600">Max: 30°C</p>
+                                    <p class="text-center text-gray-600">Min: 15°C</p>
+                                </div>
+                                <div class="rounded-lg p-4 shadow-lg flex-shrink-0" style="min-width: 100px;">
+                                    <p class="text-center text-lg font-semibold">Thu</p>
+                                    <img src="../assets/icons/sun.png" alt="Sun" class="mx-auto mt-2 w-8 h-8">
+                                    <p class="text-center text-gray-600">Max: 30°C</p>
+                                    <p class="text-center text-gray-600">Min: 15°C</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 shadow-lg flex-shrink-0" style="min-width: 100px;">
+                                    <p class="text-center text-lg font-semibold">Fri</p>
+                                    <img src="../assets/icons/cloudy.png" alt="Cloudy" class="mx-auto mt-2 w-8 h-8">
+                                    <p class="text-center text-gray-600">Max: 25°C</p>
+                                    <p class="text-center text-gray-600">Min: 15°C</p>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </main>

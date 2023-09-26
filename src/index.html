@@ -44,39 +44,80 @@
             </div>
             <!-- End navigation bar -->
 
-            <main
-                class="col-span-12 max-w-3xl mx-auto my-6"
-            >
+            <main class="col-span-12 max-w-3xl mx-auto my-6">
                 <div class="flex flex-wrap justify-center items-center mx-4">
                     <!-- Content wrapper to left a void margin -->
-                    <header class="block w-full">
-                        <h2
-                            class="text-xl md:text-2xl lg:text-3xl font-medium text-indigo-900"
+
+                    <div
+                        class="w-full grid grid-cols-[1fr_3fr_6fr] grid-rows-[repeat(3_1fr)] mb-4"
+                    >
+                        <!-- columns (grid display) are set using an Arbitrary value  -->
+                        <!-- Location info -->
+                        <div
+                            class="col-span-full text-xl md:text-2xl lg:text-3xl font-medium text-indigo-900 my-auto flex justify-between mb-2"
                         >
-                            ICON - TEMPERATURE - CITY
-                        </h2>
-                        <h3
-                            class="text-lg md:text-2xl lg:text-3xl text-slate-500"
+                            <span
+                                id="location"
+                                class="text-base md:text-lg lg:text-xl xl:text-2xl"
+                                >Balwyn, Melbourne VIC</span
+                            >
+                            <span
+                                id="updated"
+                                class="text-xs md:text-base lg:text-lg text-stone-600"
+                                >Updated 7:00PM AEST</span
+                            >
+                        </div>
+
+                        <!-- Weather info -->
+                        <img
+                            class="h-fit m-auto"
+                            src="../assets/icons/sun.png"
+                            alt="weather condition icon"
+                        />
+
+                        <span
+                            id="current-temperature"
+                            class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl m-auto"
+                            >22.3 °C</span
                         >
-                            SKY CONDITIONS
-                        </h3>
-                    </header>
+
+                        <div class="">
+                            <span
+                                id="condition"
+                                class="text-base sm:text-xl md:text-2xl lg:text-3xl text-slate-800 block"
+                                >Partially Cloudy</span
+                            >
+                            <span
+                                id="condition-desc"
+                                class="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-500 block"
+                                >Expected showers this evening</span
+                            >
+                        </div>
+                    </div>
 
                     <!-- CURRENT WEATHER INFO --- NICOLAS -->
-                    <div class="block w-full bg-sky-400">
+                    <div class="block w-full mb-4 bg-sky-400">
                         CURRENT WEATHER INFO
+
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Eius quos odio obcaecati iusto ducimus ex
-                            assumenda rerum nobis eaque. Corrupti, dolorem
-                            sapiente? Porro aperiam quae id molestiae
-                            consequuntur officia dolores.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Doloremque provident quo quia rem beatae nulla
+                            sequi illo, sed aliquam tenetur neque, porro,
+                            deserunt molestias nemo reprehenderit facere id
+                            voluptatum. Quasi!
                         </p>
                     </div>
 
                     <!-- DAILY WEATHER INFO --- EVANDRO -->
                     <div class="block w-full bg-yellow-300">
                         DAILY WEATHER INFO
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Consectetur accusamus explicabo labore
+                            deleniti optio recusandae tempora expedita totam
+                            sapiente, quasi, quisquam quo quod? Eos ratione
+                            fugit, sit odio culpa cupiditate?
+                        </p>
                     </div>
                 </div>
             </main>

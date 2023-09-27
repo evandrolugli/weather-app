@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="../dist/output.css" />
     </head>
     <body>
-        <div class="grid grid-cols-12 w-full h-full">
+        <div class="grid grid-cols-12 w-full h-full bg-slate-200">
             <!-- Content wrapper -->
             <div class="col-span-full h-14">
                 <nav
@@ -102,7 +102,7 @@
 
                     <!-- CURRENT WEATHER INFO --- NICOLAS -->
                     <div
-                        class="border w-full mb-4 grid grid-cols-12 grid-rows-[3rem_1fr]"
+                        class="w-full mb-4 grid grid-cols-12 grid-rows-[3.5rem_repeat(5_1rem)]"
                     >
                         <div
                             class="row-start-1 col-span-4 sm:col-span-3 sm:col-start-2 md:col-span-2 md:col-start-4 flex justify-center items-center bg-emerald-200"
@@ -129,7 +129,7 @@
                                 <span id="min-temp" class="block">15 °C</span>
                             </div>
                         </div>
-                        
+
                         <div
                             class="row-start-1 col-span-4 sm:col-span-3 sm:col-start-8 md:col-span-2 md:col-start-8 flex justify-center items-center bg-orange-200"
                         >
@@ -141,10 +141,87 @@
                                 <span id="max-temp" class="block">25 °C</span>
                             </div>
                         </div>
+                        <!-- End current day temperature indicators -->
+
+                        <!-- Other weather indicators: Pressure, wind, rain, uv, etc -->
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/humidity.png" alt="humidity icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">humidity</span>
+                            <span id="humidity" class="block">55%</span>
+                        </div>
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/humidity.png" alt="humidity icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">dew point</span>
+                            <span id="dew-point" class="block">6.7°C</span>
+                        </div>
+
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/windy.png" alt="windy icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">wind</span>
+                            <span id="wind" class="block">N 11Km/h</span>
+                        </div>
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/windy.png" alt="windy icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">wind gust</span>
+                            <span id="wind-gust" class="block">18Km/h</span>
+                        </div>
+                        
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/rain.png" alt="rain icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">rain since 9am</span>
+                            <span id="rain-since" class="block">0.0mm</span>
+                        </div>
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/rain.png" alt="rain icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">chance of rain</span>
+                            <span id="rain-chance" class="block">70%</span>
+                        </div>
+
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/rain.png" alt="rain icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">amount of rain</span>
+                            <span id="ammount-rain" class="block">1-5mm</span>
+                        </div>
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/pressure.png" alt="pressure icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">pressure</span>
+                            <span id="pressure" class="block">1013.3hPa</span>
+                        </div>
+
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="" alt="fire icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">FIRE DANGER RATING</span>
+                            <span id="fire-rating" class="block">No rating</span>
+                        </div>
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img src="../assets/icons/sun.png" alt="uv index icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">uv index</span>
+                            <span id="uv-index" class="block">Moderate</span>
+                        </div>
                     </div>
 
                     <!-- DAILY WEATHER INFO --- EVANDRO -->
-                    <div class="w-full border">
+                    <div class="w-full">
                         <div class="container mx-auto mt-8">
                             <h1 class="text-2xl font-bold mb-4">
                                 Daily Forecast

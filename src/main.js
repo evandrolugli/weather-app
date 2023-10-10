@@ -6,10 +6,10 @@ const city = "Melbourne"; //It should be possible to change from the user interf
 /**
  * Variables to show out values in the user interface
  */
-const cityName = "";
-const temp = ""; //It should be possible to change from the user interface
-const condition = "";
-const description = "";
+let cityName = "";
+let temp = ""; //It should be possible to change from the user interface
+let condition = "";
+let description = "";
 // const image = document.getElementById(""); //Change icon (got from the API)
 
 /**
@@ -22,7 +22,7 @@ const description = "";
 //     city.value = "";
 // };
 
-weatherUpdate = (lat, lon) => {
+weatherUpdate = (lat, lon, units) => {
     /**
      * API Key from nico9506 user, Oppenweaethermap
      * Works with latitude (lat) and longitude (lon) as parameters
@@ -30,7 +30,8 @@ weatherUpdate = (lat, lon) => {
     const xhr = new XMLHttpRequest();
     xhr.open(
         "GET",
-        `https://api.openweathermap.org/data/3.0/onecall?lat=51.5156177&lon=-0.0919983&appid=243eecaa621a7c5bbe4b86f7bc268e9e`
+        `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=243eecaa621a7c5bbe4b86f7bc268e9e&units=metric` 
+        //URL has to be changed to receive the function parameters
     );
 
     xhr.send();

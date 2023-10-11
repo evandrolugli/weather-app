@@ -22,15 +22,16 @@ let description = "";
 //     city.value = "";
 // };
 
-weatherUpdate = (lat, lon, units) => {
+weatherUpdate = (location, units = 'metric') => {
     /**
-     * API Key from nico9506 user, Oppenweaethermap
-     * Works with latitude (lat) and longitude (lon) as parameters
+     * API Key from nico9506 user, Openweathermap
+     * string 'location' --> {city name},{state code},{country code}
+     * string 'units' --> standard, metric and imperial
      */
     const xhr = new XMLHttpRequest();
     xhr.open(
         "GET",
-        `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=243eecaa621a7c5bbe4b86f7bc268e9e&units=metric` 
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=243eecaa621a7c5bbe4b86f7bc268e9e&units=${units}` 
         //URL has to be changed to receive the function parameters
     );
 
@@ -52,5 +53,8 @@ weatherUpdate = (lat, lon, units) => {
 };
 
 printWeather = () => {
+    /**
+     * For testing purposes only
+     */
     console.log({ cityName, temp, condition, description });
 };

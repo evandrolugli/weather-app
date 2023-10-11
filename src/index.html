@@ -11,8 +11,6 @@
         />
 
         <link rel="stylesheet" href="../dist/output.css" />
-
-        <script src="main.js"></script>
     </head>
     <body>
         <div class="grid grid-cols-12 w-full h-full bg-slate-200">
@@ -96,7 +94,7 @@
                             >
                             <span
                                 id="condition-desc"
-                                class="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-500 block"
+                                class="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-500 block capitalize"
                                 >Expected showers this evening</span
                             >
                         </div>
@@ -156,9 +154,9 @@
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/humidity.png" alt="humidity icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">dew point</span>
-                            <span id="dew-point" class="block">6.7°C</span>
+                            <img src="../assets/icons/" alt="visibility icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">visibility</span>
+                            <span id="visibility" class="block">100m</span>
                         </div>
 
                         <div
@@ -180,23 +178,23 @@
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
                             <img src="../assets/icons/rain.png" alt="rain icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">rain since 9am</span>
-                            <span id="rain-since" class="block">0.0mm</span>
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">Last hour rain</span>
+                            <span id="rain-one-h" class="block">0.0mm</span>
                         </div>
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
                             <img src="../assets/icons/rain.png" alt="rain icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">chance of rain</span>
-                            <span id="rain-chance" class="block">70%</span>
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">last 3 hours rain</span>
+                            <span id="rain-three-h" class="block">70mm</span>
                         </div>
 
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/rain.png" alt="rain icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">amount of rain</span>
-                            <span id="ammount-rain" class="block">1-5mm</span>
+                            <img src="../assets/icons/cloudy.png" alt="rain icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">clouds</span>
+                            <span id="clouds" class="block">15%</span>
                         </div>
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
@@ -209,16 +207,16 @@
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="" alt="fire icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">FIRE DANGER RATING</span>
-                            <span id="fire-rating" class="block">No rating</span>
+                            <img src="../assets/icons/sunrise.png" alt="sunrise icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">sunrise</span>
+                            <span id="sunrise" class="block">06:15</span>
                         </div>
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/sun.png" alt="uv index icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">uv index</span>
-                            <span id="uv-index" class="block">Moderate</span>
+                            <img src="../assets/icons/sunset.png" alt="sunset icon" class="h-[90%] row-span-2">
+                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">sunset</span>
+                            <span id="sunset" class="block">19:27</span>
                         </div>
                     </div>
 
@@ -343,5 +341,7 @@
                 </div>
             </main>
         </div>
+
+        <script src="main.js"></script>
     </body>
 </html>

@@ -34,23 +34,34 @@ const appElements = (() => {
     const getDescription = () => description.textContent;
 
     //Setters
+        //Title section
+    const setUpdated = (newDate) => (updated.textContent = newDate);
     const setCityName = (locationName) => (cityName.textContent = locationName);
     const setTemperature = (tempUpdated) =>
-        (temperature.textContent = tempUpdated);
+        (temperature.textContent = tempUpdated + " °C");
     const setCondition = (conditionUpdated) =>
         (condition.textContent = conditionUpdated);
     const setDescription = (descriptionUpdated) =>
         (description.textContent = descriptionUpdated);
+
+        //Temperature details
+    const setFeelsLike = (temp) => (feelsLike.textContent = temp + " °C");
+    const setMinTemp = (temp) => (minTemp.textContent = temp + " °C");
+    const setMaxTemp = (temp) => (maxTemp.textContent = temp + " °C");
 
     return {
         getCityName,
         getTemperature,
         getCondition,
         getDescription,
+        setUpdated,
         setCityName,
         setTemperature,
         setCondition,
         setDescription,
+        setFeelsLike,
+        setMinTemp,
+        setMaxTemp,
     };
 })();
 
@@ -85,10 +96,18 @@ const APIUtilities = () => {
                 console.log("Place not found!");
             } else {
                 let data = JSON.parse(xhr.response);
+
+                //Updates title section
                 searchCity(data.coord.lat, data.coord.lon);
+                appElements.setUpdated(Date());
                 appElements.setTemperature(data.main.temp);
                 appElements.setCondition(data.weather[0].main);
                 appElements.setDescription(data.weather[0].description);
+
+                //Updates temperature details
+                appElements.setFeelsLike(data.main.feels_like)
+                appElements.setMinTemp(data.main.temp_min)
+                appElements.setMaxTemp(data.main.temp_max)
 
                 //Image source --- It must be tested
                 //image = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;

@@ -50,15 +50,18 @@ const appElements = (() => {
     const setMaxTemp = (temp) => (maxTemp.textContent = temp + " °C");
 
     //Weather variables and details
-    const setHumidity = (newHumidity) => (humidity.textContent = newHumidity + "%");
+    const setHumidity = (newHumidity) =>
+        (humidity.textContent = newHumidity + "%");
     const setVisibility = (newVisibility) =>
-        (visibility.textContent = (newVisibility / 1000) + "Km");
+        (visibility.textContent = newVisibility / 1000 + "Km");
     const setWind = (newWind) => (wind.textContent = newWind + "m/s"); //NEEDS A CALC TO SHOW THE WIND DIRECTION
-    const setWindGust = (newWindGust) => (windGust.textContent = newWindGust + "m/s");
+    const setWindGust = (newWindGust) =>
+        (windGust.textContent = newWindGust + "m/s");
     const setRain1h = (newRain1h) => (rain1h.textContent = newRain1h);
     const setRain3h = (newRain3h) => (rain3h.textContent = newRain3h);
     const setClouds = (newClouds) => (clouds.textContent = newClouds + "%");
-    const setPressure = (newPressure) => (pressure.textContent = newPressure + "hPa");
+    const setPressure = (newPressure) =>
+        (pressure.textContent = newPressure + "hPa");
     const setSunrise = (newSunrise) => (sunrise.textContent = newSunrise);
     const setSunset = (newSunset) => (sunset.textContent = newSunset);
 
@@ -141,9 +144,9 @@ const APIUtilities = () => {
                 // appElements.setRain3h(data.rain.3h);
                 appElements.setClouds(data.clouds.all);
                 appElements.setPressure(data.main.pressure);
-                appElements.setSunrise(data.sys.sunrise);
-                appElements.setSunset(data.sys.sunset);
-
+                appElements.setSunrise(unixToDate(data.sys.sunrise));
+                appElements.setSunset(unixToDate(data.sys.sunset));
+                
                 //Image source --- It must be tested
                 //image = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
             }
@@ -177,6 +180,30 @@ const APIUtilities = () => {
                 );
             }
         };
+    };
+
+    const unixToDate = (unixTimestamp) => {
+        /**
+         * Converts an UNIX timestamp to a readable date format
+         */
+        // Create a new JavaScript Date object based on the timestamp
+        // multiplied by 1000 so that the argument is in milliseconds, not seconds
+        const date = new Date(unixTimestamp * 1000);
+
+        // Hours part from the timestamp
+        const hours = date.getHours();
+
+        // Minutes part from the timestamp
+        const minutes = "0" + date.getMinutes();
+
+        // Seconds part from the timestamp
+        const seconds = "0" + date.getSeconds();
+
+        // Will display time in 10:30:23 format
+        const formattedTime =
+            hours + ":" + minutes.slice(-2) + ":" + seconds.slice(-2);
+
+        return formattedTime;
     };
 
     return { updateWeather };

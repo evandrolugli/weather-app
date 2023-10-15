@@ -34,7 +34,7 @@ const appElements = (() => {
     const getDescription = () => description.textContent;
 
     //Setters
-        //Title section
+    //Title section
     const setUpdated = (newDate) => (updated.textContent = newDate);
     const setCityName = (locationName) => (cityName.textContent = locationName);
     const setTemperature = (tempUpdated) =>
@@ -44,10 +44,23 @@ const appElements = (() => {
     const setDescription = (descriptionUpdated) =>
         (description.textContent = descriptionUpdated);
 
-        //Temperature details
+    //Temperature details
     const setFeelsLike = (temp) => (feelsLike.textContent = temp + " °C");
     const setMinTemp = (temp) => (minTemp.textContent = temp + " °C");
     const setMaxTemp = (temp) => (maxTemp.textContent = temp + " °C");
+
+    //Weather variables and details
+    const setHumidity = (newHumidity) => (humidity.textContent = newHumidity + "%");
+    const setVisibility = (newVisibility) =>
+        (visibility.textContent = (newVisibility / 1000) + "Km");
+    const setWind = (newWind) => (wind.textContent = newWind + "m/s"); //NEEDS A CALC TO SHOW THE WIND DIRECTION
+    const setWindGust = (newWindGust) => (windGust.textContent = newWindGust + "m/s");
+    const setRain1h = (newRain1h) => (rain1h.textContent = newRain1h);
+    const setRain3h = (newRain3h) => (rain3h.textContent = newRain3h);
+    const setClouds = (newClouds) => (clouds.textContent = newClouds + "%");
+    const setPressure = (newPressure) => (pressure.textContent = newPressure + "hPa");
+    const setSunrise = (newSunrise) => (sunrise.textContent = newSunrise);
+    const setSunset = (newSunset) => (sunset.textContent = newSunset);
 
     return {
         getCityName,
@@ -62,6 +75,16 @@ const appElements = (() => {
         setFeelsLike,
         setMinTemp,
         setMaxTemp,
+        setHumidity,
+        setVisibility,
+        setWind,
+        setWindGust,
+        setRain1h,
+        setRain3h,
+        setClouds,
+        setPressure,
+        setSunrise,
+        setSunset,
     };
 })();
 
@@ -105,9 +128,21 @@ const APIUtilities = () => {
                 appElements.setDescription(data.weather[0].description);
 
                 //Updates temperature details
-                appElements.setFeelsLike(data.main.feels_like)
-                appElements.setMinTemp(data.main.temp_min)
-                appElements.setMaxTemp(data.main.temp_max)
+                appElements.setFeelsLike(data.main.feels_like);
+                appElements.setMinTemp(data.main.temp_min);
+                appElements.setMaxTemp(data.main.temp_max);
+
+                //Update Weather variables and details
+                appElements.setHumidity(data.main.humidity);
+                appElements.setVisibility(data.visibility);
+                appElements.setWind(data.wind.speed);
+                appElements.setWindGust(data.wind.gust);
+                // appElements.setRain1h(data.rain.1h);
+                // appElements.setRain3h(data.rain.3h);
+                appElements.setClouds(data.clouds.all);
+                appElements.setPressure(data.main.pressure);
+                appElements.setSunrise(data.sys.sunrise);
+                appElements.setSunset(data.sys.sunset);
 
                 //Image source --- It must be tested
                 //image = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;

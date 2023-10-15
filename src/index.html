@@ -54,47 +54,47 @@
                     <!-- Content wrapper to left a void margin -->
 
                     <div
-                        class="w-full grid grid-cols-[1fr_3fr_6fr] grid-rows-[repeat(3_1fr)] mb-4"
+                        class="w-full grid grid-cols-[3fr_1fr_3fr] grid-rows-[repeat(3_1fr)] mb-4"
                     >
                         <!-- columns (grid display) are set using an Arbitrary value  -->
                         <!-- Location info -->
                         <div
-                            class="col-span-full text-xl md:text-2xl lg:text-3xl font-medium text-indigo-900 my-auto flex justify-between mb-2"
+                            class="col-span-full text-xl md:text-2xl lg:text-3xl font-medium text-indigo-900 flex justify-between mb-2 h-full"
                         >
                             <span
                                 id="location"
-                                class="text-base md:text-lg lg:text-xl xl:text-2xl"
+                                class="text-base md:text-lg lg:text-xl xl:text-2xl my-auto"
                                 >Balwyn, Melbourne VIC</span
                             >
                             <span
                                 id="updated"
-                                class="text-xs md:text-base lg:text-lg text-right text-stone-600"
+                                class="text-xs md:text-base lg:text-lg text-right text-stone-600 truncate w-7/12 my-auto"
                                 >Updated 7:00PM AEST</span
                             >
                         </div>
 
                         <!-- Weather info -->
+                        <span
+                            id="current-temperature"
+                            class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl my-auto row-span-2 text-right"
+                            >22.3 °C</span
+                        >
+
                         <img
-                            class="h-fit m-auto"
+                            class="h-4/5 m-auto row-span-2"
                             src="../assets/icons/sun.png"
                             alt="weather condition icon"
                         />
 
-                        <span
-                            id="current-temperature"
-                            class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl m-auto"
-                            >22.3 °C</span
-                        >
-
-                        <div class="">
+                        <div class="row-span-2 flex-nowrap my-auto">
                             <span
                                 id="condition"
-                                class="text-base sm:text-xl md:text-2xl lg:text-3xl text-slate-800 block"
+                                class="text-base sm:text-xl md:text-2xl lg:text-3xl text-slate-800 block w-full"
                                 >Partially Cloudy</span
                             >
                             <span
                                 id="condition-desc"
-                                class="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-500 block capitalize"
+                                class="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-500 block capitalize w-full"
                                 >Expected showers this evening</span
                             >
                         </div>

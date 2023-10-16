@@ -64,21 +64,18 @@
                             <span
                                 id="location"
                                 class="text-base md:text-lg lg:text-xl xl:text-2xl my-auto"
-                                >Balwyn, Melbourne VIC</span
-                            >
+                            ></span>
                             <span
                                 id="updated"
                                 class="text-xs md:text-base lg:text-lg text-right text-stone-600 truncate w-7/12 my-auto"
-                                >Updated 7:00PM AEST</span
-                            >
+                            ></span>
                         </div>
 
                         <!-- Weather info -->
                         <span
                             id="current-temperature"
                             class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl my-auto row-span-2 text-right"
-                            >22.3 °C</span
-                        >
+                        ></span>
 
                         <img
                             class="h-4/5 m-auto row-span-2"
@@ -90,13 +87,11 @@
                             <span
                                 id="condition"
                                 class="text-base sm:text-xl md:text-2xl lg:text-3xl text-slate-800 block w-full"
-                                >Partially Cloudy</span
-                            >
+                            ></span>
                             <span
                                 id="condition-desc"
                                 class="text-sm sm:text-lg md:text-xl lg:text-2xl text-slate-500 block capitalize w-full"
-                                >Expected showers this evening</span
-                            >
+                            ></span>
                         </div>
                     </div>
 
@@ -112,9 +107,7 @@
                                     class="block w-full text-center uppercase font-light text-gray-700 text-sm"
                                     >FEELS LIKE</span
                                 >
-                                <span id="feels-like" class="block"
-                                    >21.7 °C</span
-                                >
+                                <span id="feels-like" class="block"></span>
                             </div>
                         </div>
 
@@ -126,7 +119,7 @@
                                     class="block w-full text-center uppercase font-light text-gray-700 text-sm"
                                     >MIN temp</span
                                 >
-                                <span id="min-temp" class="block">15 °C</span>
+                                <span id="min-temp" class="block"></span>
                             </div>
                         </div>
 
@@ -138,7 +131,7 @@
                                     class="block w-full text-center uppercase font-light text-gray-700 text-sm"
                                     >max temp</span
                                 >
-                                <span id="max-temp" class="block">25 °C</span>
+                                <span id="max-temp" class="block"></span>
                             </div>
                         </div>
                         <!-- End current day temperature indicators -->
@@ -147,76 +140,146 @@
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/humidity.png" alt="humidity icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">humidity</span>
-                            <span id="humidity" class="block">55%</span>
+                            <img
+                                src="../assets/icons/humidity.png"
+                                alt="humidity icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >humidity</span
+                            >
+                            <span id="humidity" class="block"></span>
                         </div>
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/" alt="visibility icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">visibility</span>
-                            <span id="visibility" class="block">100m</span>
+                            <img
+                                src="../assets/icons/"
+                                alt="visibility icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >visibility</span
+                            >
+                            <span id="visibility" class="block"></span>
                         </div>
 
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/windy.png" alt="windy icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">wind</span>
-                            <span id="wind" class="block">N 11Km/h</span>
+                            <img
+                                src="../assets/icons/windy.png"
+                                alt="windy icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >wind</span
+                            >
+                            <span id="wind" class="block"></span>
                         </div>
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/windy.png" alt="windy icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">wind gust</span>
-                            <span id="wind-gust" class="block">18Km/h</span>
-                        </div>
-                        
-                        <div
-                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
-                        >
-                            <img src="../assets/icons/rain.png" alt="rain icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">Last hour rain</span>
-                            <span id="rain-one-h" class="block">0.0mm</span>
-                        </div>
-                        <div
-                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
-                        >
-                            <img src="../assets/icons/rain.png" alt="rain icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">last 3 hours rain</span>
-                            <span id="rain-three-h" class="block">70mm</span>
+                            <img
+                                src="../assets/icons/windy.png"
+                                alt="windy icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >wind gust</span
+                            >
+                            <span id="wind-gust" class="block"></span>
                         </div>
 
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/cloudy.png" alt="rain icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">clouds</span>
-                            <span id="clouds" class="block">15%</span>
+                            <img
+                                src="../assets/icons/rain.png"
+                                alt="rain icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >Last hour rain</span
+                            >
+                            <span id="rain-one-h" class="block"></span>
                         </div>
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/pressure.png" alt="pressure icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">pressure</span>
-                            <span id="pressure" class="block">1013.3hPa</span>
+                            <img
+                                src="../assets/icons/rain.png"
+                                alt="rain icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >last 3 hours rain</span
+                            >
+                            <span id="rain-three-h" class="block"></span>
                         </div>
 
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/sunrise.png" alt="sunrise icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">sunrise</span>
-                            <span id="sunrise" class="block">06:15</span>
+                            <img
+                                src="../assets/icons/cloudy.png"
+                                alt="rain icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >clouds</span
+                            >
+                            <span id="clouds" class="block"></span>
                         </div>
                         <div
                             class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
                         >
-                            <img src="../assets/icons/sunset.png" alt="sunset icon" class="h-[90%] row-span-2">
-                            <span class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap">sunset</span>
-                            <span id="sunset" class="block">19:27</span>
+                            <img
+                                src="../assets/icons/pressure.png"
+                                alt="pressure icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >pressure</span
+                            >
+                            <span id="pressure" class="block"></span>
+                        </div>
+
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-3 md:col-start-4 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 mr-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img
+                                src="../assets/icons/sunrise.png"
+                                alt="sunrise icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >sunrise</span
+                            >
+                            <span id="sunrise" class="block"></span>
+                        </div>
+                        <div
+                            class="col-span-6 sm:col-span-4 md:col-span-3 sm:col-start-7 md:col-start-7 grid grid-rows-[1fr_2fr] grid-cols-[3rem_1fr] mt-4 ml-1 shadow-lg bg-white pt-2 pl-2 rounded"
+                        >
+                            <img
+                                src="../assets/icons/sunset.png"
+                                alt="sunset icon"
+                                class="h-[90%] row-span-2"
+                            />
+                            <span
+                                class="text-xs text-gray-700 uppercase block w-full overflow-hidden text-ellipsis whitespace-nowrap"
+                                >sunset</span
+                            >
+                            <span id="sunset" class="block"></span>
                         </div>
                     </div>
 

@@ -122,9 +122,10 @@ const APIUtilities = () => {
                 console.log("Place not found!");
             } else {
                 let data = JSON.parse(xhr.response);
+                console.log(data);
 
                 //Updates title section
-                searchCity(data.coord.lat, data.coord.lon);
+                searchCity(data.coord.lat, data.coord.lon, data.name);
                 appElements.setUpdated(Date());
                 appElements.setTemperature(data.main.temp);
                 appElements.setCondition(data.weather[0].main);
@@ -141,9 +142,15 @@ const APIUtilities = () => {
                 appElements.setWind(
                     degreesToDirection(data.wind.deg) + " " + data.wind.speed
                 );
-                appElements.setWindGust(data.wind.gust);
-                // appElements.setRain1h(data.rain.1h);
-                // appElements.setRain3h(data.rain.3h);
+                appElements.setWindGust(
+                    data.wind.gust == undefined ? "-" : data.wind.gust
+                );
+                appElements.setRain1h(
+                    data.rain == undefined ? "-" : data.rain["1h"]
+                );
+                appElements.setRain3h(
+                    data.rain == undefined ? "-" : data.rain["3h"]
+                );
                 appElements.setClouds(data.clouds.all);
                 appElements.setPressure(data.main.pressure);
                 appElements.setSunrise(unixToDate(data.sys.sunrise));
@@ -155,7 +162,7 @@ const APIUtilities = () => {
         };
     };
 
-    const searchCity = (lat, lon) => {
+    const searchCity = (lat, lon, cityName) => {
         /**
          * API Key from nico9506 user, Openweathermap
          * 'lat' --> latitude
@@ -177,8 +184,9 @@ const APIUtilities = () => {
                 console.log("Place not found!");
             } else {
                 let data = JSON.parse(xhr.response);
+
                 appElements.setCityName(
-                    String(data[0].name) + ", " + String(data[0].country)
+                    String(cityName + ", " + data[0].name + ", " + data[0].country)
                 );
             }
         };

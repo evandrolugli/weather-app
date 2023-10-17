@@ -89,7 +89,7 @@ const APIUtilities = () => {
                 appElements.setTemperature(data.main.temp);
                 appElements.setCondition(data.weather[0].main);
                 appElements.setDescription(data.weather[0].description);
-
+                
                 //Image source --- It must be tested
                 //image = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
             }

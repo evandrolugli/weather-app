@@ -1,0 +1,15 @@
+###
+
+# Latitude / Longitude
+GET http://api.openweathermap.org/geo/1.0/direct?q=Osasco&limit=5&appid={API_KEY}
+
+###
+
+# Forecast
+GET https://api.openweathermap.org/data/2.5/forecast?lat=-23.5324859&lon=-46.7916801&appid={API_KEY}
+
+###
+
+# Current
+https://api.openweathermap.org/data/2.5/weather?q=Osasco&appid={API_KEY}e&units=standard
+

@@ -1,3 +1,5 @@
+const API_KEY = "243eecaa621a7c5bbe4b86f7bc268e9e";
+
 const appElements = (() => {
     /**
      * Factory function to get the HTML elements
@@ -162,6 +164,60 @@ const APIUtilities = () => {
         };
     };
 
+    const updateForecast = (location, units = "metric") => {
+        const forecastXhr = new XMLHttpRequest();
+        forecastXhr.open(
+            "GET",
+            `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=243eecaa621a7c5bbe4b86f7bc268e9e&units=${units}`
+        );
+
+        forecastXhr.send();
+        forecastXhr.onload = () => {
+            if (forecastXhr.status === 404) {
+                console.log("Place not found!");
+            } else {
+                let forecastData = JSON.parse(forecastXhr.response);
+                console.log(forecastData);
+
+                const fiveDayForecast = [];
+                let currentDay = null;
+                let forecastCount = 0;
+
+                for (let i = 0; i < forecastData.list.length; i++) {
+                    const item = forecastData.list[i];
+                    const date = new Date(item.dt_txt);
+                    const dayOfWeek = date.toLocaleDateString("en-US", { weekday: "short" });
+                    const hour = date.getHours();
+
+                    // Choose only the first occurrence of each day
+                    if (currentDay !== dayOfWeek && hour === 12) {
+                        const icon = `http://openweathermap.org/img/wn/${item.weather[0].icon}.png`;
+                        const minTemp = `${item.main.temp_min}°C`;
+                        const maxTemp = `${item.main.temp_max}°C`;
+
+                        const forecastItem = {
+                            dayOfWeek: dayOfWeek,
+                            icon: icon,
+                            minTemp: minTemp,
+                            maxTemp: maxTemp
+                        };
+
+                        fiveDayForecast.push(forecastItem);
+                        currentDay = dayOfWeek;
+                        forecastCount++;
+                    }
+
+                    // Break the loop after obtaining 5 days of forecast
+                    if (forecastCount === 5) {
+                        break;
+                    }
+                }
+
+                console.log(fiveDayForecast);
+            }
+        };
+    };
+
     const searchCity = (lat, lon, cityName) => {
         /**
          * API Key from nico9506 user, Openweathermap
@@ -241,12 +297,13 @@ const APIUtilities = () => {
         return "";
     };
 
-    return { updateWeather };
+    return { updateWeather, updateForecast };
 };
 
-/**
+/** 
  * For testing purposes only
  */
+
 printWeather = () => {
     console.log(appElements.getCityName(), appElements.getTemperature());
 };
